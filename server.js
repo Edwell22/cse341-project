@@ -1,11 +1,12 @@
-const express = require('express');
+const express = require('');
+const connectDB = require('');
 const app = express();
 
-app.get('/',(req,res) => {
-    res.send('Edwell kakunguwo');
-});
+connectDB();
+app.use(express.json({extended:false}));
+app.use('',require('./backend/routes/app'));
+const port = process.env.Port || 8080;
 
-const port = 3000;
+app.use('/', require('./routes'));
 
-app.listen(process.env.port || port);
-console.log('Web server is listening at port' + (process.env.port || port));
+app.listen(Port, () => console.log('server started'));

@@ -1,13 +1,14 @@
 {
   "dependencies": {
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "g": "^2.0.1",
     "global": "^4.4.0",
     "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.1.4",
     "server": "^1.0.39"
   },
   "name": "cse341-project",
@@ -15,10 +16,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "server": "nodemon server.js",
+    "start": "nodemon server.js",
+    "start-prod": "node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
